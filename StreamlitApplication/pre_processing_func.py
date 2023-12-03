@@ -25,23 +25,19 @@ import matplotlib.pyplot as plt
 
 
 
-@st.cache
 def min_dates_filtering(dataframe, selected_date_column, min_date):
     dataframe = dataframe[dataframe[selected_date_column] >= min_date]
     return dataframe
 
-@st.cache
 def max_dates_filtering(dataframe, selected_date_column, max_date):
     dataframe = dataframe[dataframe[selected_date_column] <= max_date]
     return dataframe
 
 
-@st.cache
 def dates_descending(dataframe, selected_date_column):
     date_list_descending = dataframe[selected_date_column].sort_values(ascending = False).unique()
     return date_list_descending
 
-@st.cache
 def dates_ascending(dataframe, selected_date_column):
     date_list_ascending = dataframe[selected_date_column].sort_values().unique()
     return date_list_ascending
