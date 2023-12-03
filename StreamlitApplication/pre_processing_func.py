@@ -1,21 +1,15 @@
-from pyexpat import model
 import streamlit as st
 import pandas as pd
 import numpy as np
 import plotly.express as px
 import plotly.graph_objs as go
 # import matplotlib.pyplot as plt
-from statsmodels.tsa.stattools import adfuller
 import statsmodels.api as sm
 import matplotlib.pyplot as plt
-from pylab import rcParams
-import seaborn as sns
-import sgt
-from sgt import SGT
+
 import datetime as dt
 from datetime import datetime as dt
 from dateutil.relativedelta import relativedelta
-import yfinance as yf
 from statsmodels.tsa.seasonal import seasonal_decompose
 from statsmodels.tsa.seasonal import seasonal_decompose
 from dateutil.parser import parse
