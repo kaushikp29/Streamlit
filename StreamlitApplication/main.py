@@ -51,7 +51,6 @@ st.markdown(
 # 'PSAVERT' -> Personal Saving Rate https://fred.stlouisfed.org/series/PSAVERT
 # 'CIVPART' -> Labor Force Participation Rate ( https://fred.stlouisfed.org/series/CIVPART)
 # 'MPRIME' -> Bank Prime Loan Rate https://fred.stlouisfed.org/series/MPRIME
-@st.cache
 def get_data():
     start = datetime(2005, 5, 1)
     end = datetime(2023, 10, 1)
