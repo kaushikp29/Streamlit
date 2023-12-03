@@ -1,6 +1,5 @@
 # streamlit
 import pandas_datareader as pdr
-import eda_functions
 
 import streamlit as st
 # data preprocessing and storage
