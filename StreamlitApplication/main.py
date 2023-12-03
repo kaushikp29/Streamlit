@@ -224,7 +224,7 @@ with advanced_eda:
                                                     text = top_dates["tgl"]))
                                 
                             # fig_w_traces.show()
-            fig_w_traces.update_layout(template="simple_white", font=dict(size=18), title_text='Forecasting using Linear Regression model',
+            fig_w_traces.update_layout(template="simple_white", font=dict(size=18),
                                 width=650, title_x=0.5, height=400, xaxis_title='Date',
                                 yaxis_title='Percent')
             
