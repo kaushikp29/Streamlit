@@ -150,7 +150,7 @@ with landing_page_eda:
     mask = np.zeros_like(correlation, dtype=bool)
     mask[np.triu_indices_from(mask)] = True
     # Viz
-    df_corr_viz = correlation.mask(mask).dropna(how='all').dropna('columns', how='all')
+    df_corr_viz = correlation.mask(mask)#.dropna(how='all').dropna('columns', how='all')
     fig_correlation = px.imshow(df_corr_viz, text_auto=True)
     correlation_plot.caption('This is a correlation plot among all the different economic indicators')
 
