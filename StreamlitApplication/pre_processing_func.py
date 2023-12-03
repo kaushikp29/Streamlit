@@ -1,0 +1,53 @@
+from pyexpat import model
+import streamlit as st
+import pandas as pd
+import numpy as np
+import plotly.express as px
+import plotly.graph_objs as go
+# import matplotlib.pyplot as plt
+from statsmodels.tsa.stattools import adfuller
+import statsmodels.api as sm
+import matplotlib.pyplot as plt
+from pylab import rcParams
+import seaborn as sns
+import sgt
+from sgt import SGT
+import datetime as dt
+from datetime import datetime as dt
+from dateutil.relativedelta import relativedelta
+import yfinance as yf
+from statsmodels.tsa.seasonal import seasonal_decompose
+from statsmodels.tsa.seasonal import seasonal_decompose
+from dateutil.parser import parse
+import warnings
+warnings.filterwarnings('ignore')
+
+import numpy as np
+import pandas as pd
+from scipy import stats
+import statsmodels.api as sm
+import matplotlib.pyplot as plt
+
+
+
+
+@st.cache
+def min_dates_filtering(dataframe, selected_date_column, min_date):
+    dataframe = dataframe[dataframe[selected_date_column] >= min_date]
+    return dataframe
+
+@st.cache
+def max_dates_filtering(dataframe, selected_date_column, max_date):
+    dataframe = dataframe[dataframe[selected_date_column] <= max_date]
+    return dataframe
+
+
+@st.cache
+def dates_descending(dataframe, selected_date_column):
+    date_list_descending = dataframe[selected_date_column].sort_values(ascending = False).unique()
+    return date_list_descending
+
+@st.cache
+def dates_ascending(dataframe, selected_date_column):
+    date_list_ascending = dataframe[selected_date_column].sort_values().unique()
+    return date_list_ascending
